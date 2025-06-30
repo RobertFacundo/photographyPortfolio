@@ -1,0 +1,144 @@
+    /* src/components/GalleryView.css */
+
+    /* Estilos generales del contenedor de la galería */
+    .gallery-container {
+      margin: 40px 0;
+      /* Espacio superior e inferior para separar de otros elementos */
+    }
+
+    .gallery-title {
+      text-align: center;
+      font-family: 'Merriweather', serif;
+      /* Merriweather para el título de la galería */
+      font-weight: 700;
+      font-size: 2em;
+      color: #444;
+      margin-bottom: 30px;
+    }
+
+    .no-images-message {
+      text-align: center;
+      font-size: 1.2em;
+      color: #777;
+      padding: 50px;
+    }
+
+    /* --- Estilos OBLIGATORIOS para react-masonry-css --- */
+    /* Este es el contenedor flex que mantiene las columnas */
+    .my-masonry-grid {
+      display: -webkit-box;
+      /* Propiedad antigua para compatibilidad con Safari */
+      display: -ms-flexbox;
+      /* Propiedad antigua para compatibilidad con IE 10 */
+      display: flex;
+      /* Contenedor flex para las columnas */
+      flex-direction: row;
+      margin-left: -20px;
+      /* Margen negativo para compensar el padding de las columnas */
+      width: auto;
+      /* Ancho automático */
+    }
+
+    /* Este es el estilo para cada columna individual de Masonry */
+    .my-masonry-grid_column {
+      padding-left: 20px;
+      /* Espaciado entre columnas (el "gutter") */
+      background-clip: padding-box;
+      /* Asegura que el padding no afecte el fondo */
+    }
+
+    /* --- Estilos para cada item de la galería (imagen + overlay) --- */
+    .gallery-item {
+      position: relative;
+      /* ¡MUY IMPORTANTE! Para posicionar el overlay absolutamente dentro */
+      margin-bottom: 20px;
+      /* Espacio vertical entre imágenes */
+      overflow: hidden;
+      /* Oculta cualquier parte del overlay que se desborde */
+      border-radius: 8px;
+      /* Bordes redondeados para un look suave */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      /* Sombra sutil para destacar cada imagen */
+      cursor: pointer;
+      /* Indica que es un elemento interactivo */
+    }
+
+    /* --- El truco para el tamaño de la imagen dentro de la grilla masonry --- */
+    .gallery-item img {
+      display: block;
+      /* Elimina espacio extra debajo de la imagen (por defecto de inline) */
+      width: 100%;
+      /* La imagen ocupa TODO el ancho de la columna (fijo) */
+      height: auto;
+      /* La altura se ajusta automáticamente para mantener la proporción original */
+      border-radius: 8px;
+      /* Hereda los bordes redondeados del contenedor */
+      transition: transform 0.8s ease;
+      /* Transición suave para un posible zoom en hover */
+      opacity: 0;
+      /* Empieza invisible */
+      animation: fadeIn 1.5s forwards;
+    }
+
+    /* --- Estilos para el Overlay (capa que aparece en hover) --- */
+    .image-overlay {
+      position: absolute;
+      /* Se posiciona absolutamente sobre la imagen */
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      /* Fondo negro semitransparente */
+      color: white;
+      /* Color del texto */
+
+      /* Centrar el texto dentro del overlay usando flexbox */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      /* Para que el padding no afecte el tamaño total del overlay */
+      text-align: center;
+
+      /* Efecto de transición para aparecer suavemente */
+      opacity: 0;
+      /* Inicialmente es invisible */
+      transition: opacity 1.6s ease;
+      font-family: 'Inter', sans-serif;
+      /* Usamos Inter para el texto del overlay */
+      font-size: 0.95em;
+      line-height: 1.4;
+    }
+
+    /* --- El efecto HOVER: muestra el overlay y escala la imagen --- */
+    .gallery-item:hover .image-overlay {
+      opacity: 1;
+      /* Al hacer hover sobre el .gallery-item, el overlay se vuelve visible */
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.05);
+      /* La imagen se agranda un poco para un efecto visual */
+    }
+
+    /* Estilos para el párrafo dentro del overlay */
+    .image-overlay-text {
+      margin: 0;
+      /* Elimina márgenes por defecto del párrafo */
+      max-width: 90%;
+      /* Limita el ancho del texto dentro del overlay */
+      letter-spacing: 1px;
+    }
+
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }

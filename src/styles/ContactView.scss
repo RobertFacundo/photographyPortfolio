@@ -1,0 +1,75 @@
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    background: url('https://images.unsplash.com/photo-1496449903678-68ddcb189a24?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+    background-size: contain;
+    /* Cubre todo el área sin distorsionar la imagen */
+    background-position: left;
+    /* Centra la imagen */
+    background-repeat: no-repeat;
+    min-height: 90vh;
+
+    justify-content: flex-end;
+    /* NEW: Vertically center the content within the contact-content */
+    align-items: center;
+
+    opacity: 0;
+    /* Empieza invisible */
+    animation: fadeIn 1.5s forwards;
+}
+
+
+.contactDetails {
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    /* Align text to the right */
+}
+
+.contactDetails p {
+    font-size: 1.2em;
+    line-height: 3;
+    margin-bottom: 20px;
+    width: 500px;
+    color: #d8d2d2da;
+    font-family: "Merriweather", serif;
+    letter-spacing: 1px;
+}
+
+.github-link {
+    text-align: center;
+    /* To align the icon and text */
+    align-items: center;
+    color: #2e2e30;
+    /* A color for the link, or whatever you prefer */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 5em;
+    transition: color 1.3s ease;
+    /* Smooth transition on hover */
+}
+
+.github-link:hover {
+    color: #d8d2d2;
+    /* A GitHub green on hover */
+}
+
+.github-link .fa-github,
+.github-link svg {
+    /* Styles for the Font Awesome icon */
+    margin-right: 8px;
+    font-size: 1.3em;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

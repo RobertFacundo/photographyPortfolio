@@ -1,0 +1,77 @@
+/* src/components/NavButton.css */
+
+/* Estilos base del botón de navegación */
+.nav-button {
+  position: relative; /* Clave para los pseudo-elementos */
+  display: inline-block;
+  padding: 10px 20px; /* Padding por defecto para botones de navegación */
+  text-decoration: none;
+  color: #ffffff; /* Color de texto por defecto */
+  font-size: 1.2em; /* Tamaño de fuente por defecto */
+  letter-spacing: 1px;
+  overflow: hidden; /* Importante para el efecto de los bordes */
+  border: 2px solid transparent; /* Evita que el texto "salte" cuando aparecen los bordes */
+  transition: color 0.3s ease; /* Transición para el color del texto */
+  text-transform: uppercase; /* Opcional: para un aspecto de navegación */
+  font-family: "Merriweather", serif;
+  font-weight: 300;
+}
+
+.nav-button:hover {
+  color: #e6e1e1; /* Color de texto al hacer hover */
+}
+
+/* Estilos de los pseudo-elementos para el efecto de borde */
+.nav-button:before,
+.nav-button:after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  transform: scale(0); /* Inicialmente invisibles */
+  transition: 0.5s; /* Duración de la animación */
+}
+
+/* Borde inferior y izquierdo */
+.nav-button:before {
+  border-bottom: 3px solid #c6c0c0; /* Color del borde por defecto */
+  border-left: 3px solid #c6c0c0;
+  transform-origin: 0 100%; /* Origen de la animación desde la esquina inferior izquierda */
+}
+
+/* Borde superior y derecho */
+.nav-button:after {
+  border-top: 3px solid #c6c0c0; /* Color del borde por defecto */
+  border-right: 3px solid #c6c0c0;
+  transform-origin: 100% 0%; /* Origen de la animación desde la esquina superior derecha */
+}
+
+/* Estado hover: los bordes aparecen */
+.nav-button:hover:after,
+.nav-button:hover:before {
+  transform: scale(1);
+}
+
+/* --- Estilos específicos para el botón "Enter" del SplashScreen --- */
+/* Sobrescribe los estilos base para hacer el botón "Enter" más grande y con bordes blancos */
+.nav-button.splash-enter-button {
+  padding: 18px 40px;
+  font-size: 2.2em;
+  letter-spacing: 3px;
+  font-weight: bold;
+  color: #f3e8e8; /* Texto blanco */ /* Color del borde para la animación */
+}
+
+/* Asegurarse de que los pseudo-elementos del botón "Enter" también tengan bordes blancos */
+.nav-button.splash-enter-button:before,
+.nav-button.splash-enter-button:after {
+  border-color: #fff;
+}
+
+/* El texto del botón Enter también debe ser blanco en hover */
+.nav-button.splash-enter-button:hover {
+    color: #fff;
+}

@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { SplashScreen } from "./views/SplashScreen"
+import { Home } from "./views/Home";
+import { Contact } from "./views/Contact";
+import { Portraits } from "./views/Portraits";
+import { Places } from "./views/Places";
+import NavBar from "./components/NavBar";
+import './App.css';
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    <Router>
+      <Routes>
+        <Route path='/' element={<SplashScreen />} />
+        <Route path="/Home" element={<React.Fragment><NavBar /><Home /></React.Fragment>} />
+        <Route path="/Portraits" element={<React.Fragment><NavBar /><Portraits /></React.Fragment>} />
+        <Route path="/Places" element={<React.Fragment><NavBar /><Places /></React.Fragment>} />
+        <Route path="/Contact" element={<React.Fragment><NavBar /><Contact /></React.Fragment>} />
+      </Routes>
+    </Router>
+  );
 }
 
 export default App

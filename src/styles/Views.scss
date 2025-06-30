@@ -1,0 +1,20 @@
+/* src/styles/Views.scss */
+
+// Estilos generales para todos los view-containers
+.view-container {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center; // Esto centra los elementos inline/inline-block como títulos y texto.
+  min-height: calc(100vh - 100px); // Ajusta según la altura de tu navbar/footer
+
+  // Estas propiedades pueden ir aquí si todas las vistas necesitan este comportamiento,
+  // pero las sobrescribiremos en .contact-view para su layout específico.
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    padding: 1rem;
+  }
+}
