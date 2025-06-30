@@ -1,5 +1,5 @@
 import React from "react"
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom"
+import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom"
 import { SplashScreen } from "./views/SplashScreen"
 import { Home } from "./views/Home";
 import { Contact } from "./views/Contact";
@@ -10,7 +10,7 @@ import NavBar from "./components/NavBar";
 import './App.css';
 
 function App() {
-
+  const location = useLocation()
   return (
     <Router>
       <Routes>
@@ -20,7 +20,7 @@ function App() {
         <Route path="/Places" element={<React.Fragment><NavBar /><Places /></React.Fragment>} />
         <Route path="/Contact" element={<React.Fragment><NavBar /><Contact /></React.Fragment>} />
       </Routes>
-      <Footer/>
+      {location.pathname !== '/' && <Footer />}
     </Router>
   );
 }
