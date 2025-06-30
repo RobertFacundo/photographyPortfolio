@@ -5,6 +5,7 @@ import { Home } from "./views/Home";
 import { Contact } from "./views/Contact";
 import { Portraits } from "./views/Portraits";
 import { Places } from "./views/Places";
+import { Footer } from "./components/Footer";
 import NavBar from "./components/NavBar";
 import './App.css';
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/Places" element={<React.Fragment><NavBar /><Places /></React.Fragment>} />
         <Route path="/Contact" element={<React.Fragment><NavBar /><Contact /></React.Fragment>} />
       </Routes>
+      <Footer/>
     </Router>
   );
 }

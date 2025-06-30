@@ -1,0 +1,26 @@
+.footer-container{
+      background-color: rgba(0, 0, 0, 0.421);
+    color: white;
+    width: 100%;
+    position: fixed; /* Keep this */
+    bottom: 0; /* Keep this */
+    left: 0; /* Keep this */
+    z-index: 1000; /* Keep this */
+    max-height: 2rem; /* Keep this */
+    font-size: 11px;
+    padding: 0.5rem 0; /* Add some padding for better aesthetics */
+    text-align: center; 
+    letter-spacing: 1px;
+
+    a{
+        font-size: 13px;
+        margin-left: 2px;
+        color: rgba(255, 255, 255, 0.611);
+        letter-spacing: 2px;
+        transition: color 0.6s ease-out;
+
+        &:hover{
+            color: white;
+        }
+    }
+}

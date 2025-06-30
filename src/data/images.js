@@ -61,10 +61,10 @@ const allImages = [
   },
   {
     id: 'img009',
-    src: 'https://plus.unsplash.com/premium_photo-1664464229426-aaa3623b0bd1?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-    alt: 'Portrait of a young woman smiling', // Translated
+    src: 'https://images.unsplash.com/photo-1708359607671-78f9f64afe97?q=80&w=1331&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
+    alt: 'Partial portrait showing a striking blue eyes woman with direct gaze.',
     category: 'portrait',
-    caption: 'Contagious joy.' // Translated
+    caption: 'The windows to her soul.'
   },
   {
     id: 'img010',
