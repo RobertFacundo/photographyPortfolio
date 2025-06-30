@@ -1,4 +1,4 @@
-# Photographi Portfolio - FrontEnd
+# 📸 Photographic Portfolio 
 
 🔗 **Live Demo:** https://photography-portfolio-template-taupe.vercel.app/
 
