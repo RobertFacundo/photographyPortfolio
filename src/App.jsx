@@ -35,7 +35,7 @@ function App() {
     <Router>
       <Routes>
         <Route path='/' element={<SplashScreen />} />
-        <Router path='/*' element={<AppContent />} />
+        <Route path='/*' element={<AppContent />} />
       </Routes>
     </Router>
   );
