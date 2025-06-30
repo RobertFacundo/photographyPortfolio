@@ -2,7 +2,10 @@
 
 🔗 **Live Demo:** https://photography-portfolio-template-taupe.vercel.app/
 
-This is a responsive, modern front-end photography portfolio built with React. It's designed to showcase a collection of images in an interactive and visually appealing way, providing a seamless Browse experience for users. The project emphasizes clean code, reusable components, and dynamic layout management, making it an ideal template for photographers or artists to present their work online.
+This is a responsive, modern front-end photography portfolio built with React. 
+It's designed to showcase a collection of images in an interactive and visually appealing way, providing a seamless Browse experience for users. 
+
+-The project emphasizes clean code, reusable components, and dynamic layout management, making it an ideal template for photographers or artists to present their work online.
 ---
 
 ### 🚀 Tech Stack
